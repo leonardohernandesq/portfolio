@@ -13,25 +13,15 @@ export const Container = styled.main`
     }
 `
 
-export const Wrapper = styled.section`
-    max-width:75rem;
-    width: 90%;
-    display: flex;
-    align-items:center;
-    flex-direction:column;
-    padding:50px 0px;
-
-    @media(max-width:50rem){
-        flex-direction:column;
-    }
-`
-
 export const WrapperBanner = styled.section`
     max-width:75rem;
     width: 90%;
+    height: 100%;
     display: flex;
     align-items:center;
     flex-direction:column;
+    justify-content:center;
+    position:relative;
 
     @media(max-width:50rem){
         flex-direction:column;
@@ -134,8 +124,8 @@ export const Banner = styled.div`
 `
 export const SocialMedia = styled.div`
     position: absolute;
-    right:460px;
-    bottom:30px;
+    right:0;
+    bottom:20px;
 
     a{
         position:relative;
