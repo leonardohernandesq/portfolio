@@ -45,12 +45,12 @@ export function Header(){
                                 <S.DropDown>
                                     
                                     <div className='menu'>
-                                        <Link href="#">Home</Link>
-                                        <Link href="#about">Quem Sou</Link>
-                                        <Link href="#">Skills</Link>
-                                        <Link href="#">Experiências</Link>
-                                        <Link href="#">Projetos</Link>
-                                        <Link href="#">Contato</Link>
+                                        <Link href="#" onClick={() => OpenModal()}>Home</Link>
+                                        <Link href="#about" onClick={() => OpenModal()}>Quem Sou</Link>
+                                        <Link href="#" onClick={() => OpenModal()}>Skills</Link>
+                                        <Link href="#" onClick={() => OpenModal()}>Experiências</Link>
+                                        <Link href="#" onClick={() => OpenModal()}>Projetos</Link>
+                                        <Link href="#" onClick={() => OpenModal()}>Contato</Link>
                                     </div>
                                 </S.DropDown>
                             </> :
