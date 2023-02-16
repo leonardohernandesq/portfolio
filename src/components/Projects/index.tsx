@@ -12,7 +12,7 @@ export function Projects(){
 
     return(
         <S.Container>
-            <S.Wrapper> 
+            <S.Wrapper id='project'> 
                 <Title>Projetos</Title>
                 <section>
                     {
@@ -29,11 +29,11 @@ export function Projects(){
                                     <h1>{item.title}</h1>
                                     <p>{item.description}</p>
                                     <S.DivButton>
-                                        <S.ButtonProject href={item.linkproject}>
+                                        <S.ButtonProject href={item.linkproject} target='blank'>
                                             <FiLink size={20}/>
                                             Ver Projeto
                                         </S.ButtonProject>
-                                        <S.ButtonProject href={item.linkgithub}>
+                                        <S.ButtonProject href={item.linkgithub} target='blank'>
                                             <FiGithub size={20}/>
                                             Ver no GitHub
                                         </S.ButtonProject>

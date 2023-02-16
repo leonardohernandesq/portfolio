@@ -34,6 +34,11 @@ export const Enterprise = styled.div`
     border-radius:20px;
     border-bottom:solid 8px var(--blue);
 
+    .descriptionExp{
+        font-size:1.1rem;
+        line-height:1.5rem;
+    }
+
     div{
         display: grid;
         grid-template-columns: auto auto;

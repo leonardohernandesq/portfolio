@@ -50,8 +50,5 @@ export const SocialMediaDiv = styled.div`
     margin-top:1rem;
     display: flex;
     flex-direction:row !important;
-    
-    svg{
-        margin-right:0.5rem;
-    }
+    gap: 1rem;
 `;

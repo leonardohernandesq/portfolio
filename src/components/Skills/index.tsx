@@ -7,7 +7,7 @@ import Image from 'next/image';
 export function Skills() {
     return (
         <S.Container>
-            <S.Wrapper>
+            <S.Wrapper id='skills'>
                 <Title>Skills</Title>
                 <S.ContainerStack>
                     <S.DivStack>

@@ -15,18 +15,18 @@ export function Header(){
         <S.Container>
             <S.Header>
                 <S.Logo>
-                    <Link href="#">
+                    <Link href="/">
                         <h2>Leonardo Hernandes</h2>
                     </Link>
                 </S.Logo>
 
                 <S.NavHeader>
-                    <Link href="#">Home</Link>
+                    <Link href="/">Home</Link>
                     <Link href="#about">Quem Sou</Link>
-                    <Link href="#">Skills</Link>
-                    <Link href="#">Experiências</Link>
-                    <Link href="#">Projetos</Link>
-                    <Link href="#">Contato</Link>
+                    <Link href="#skills">Skills</Link>
+                    <Link href="#experience">Experiências</Link>
+                    <Link href="#project">Projetos</Link>
+                    <Link href="#contato">Contato</Link>
                 </S.NavHeader>
 
                 <S.DropMobile>
@@ -45,12 +45,12 @@ export function Header(){
                                 <S.DropDown>
                                     
                                     <div className='menu'>
-                                        <Link href="#" onClick={() => OpenModal()}>Home</Link>
+                                        <Link href="/" onClick={() => OpenModal()}>Home</Link>
                                         <Link href="#about" onClick={() => OpenModal()}>Quem Sou</Link>
-                                        <Link href="#" onClick={() => OpenModal()}>Skills</Link>
-                                        <Link href="#" onClick={() => OpenModal()}>Experiências</Link>
-                                        <Link href="#" onClick={() => OpenModal()}>Projetos</Link>
-                                        <Link href="#" onClick={() => OpenModal()}>Contato</Link>
+                                        <Link href="#skills" onClick={() => OpenModal()}>Skills</Link>
+                                        <Link href="#experience" onClick={() => OpenModal()}>Experiências</Link>
+                                        <Link href="#project" onClick={() => OpenModal()}>Projetos</Link>
+                                        <Link href="#contato" onClick={() => OpenModal()}>Contato</Link>
                                     </div>
                                 </S.DropDown>
                             </> :

@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa'
 export function Contact(){
     return(
         <S.Container>
-            <S.Wrapper>
+            <S.Wrapper id='contact'>
                 <Title>Contato</Title>
                 
                 <S.ContactContainer>
@@ -15,26 +15,21 @@ export function Contact(){
                     </div>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque eu eros sit amet malesuada.
-                            Vestibulum quis est aliquet, lobortis diam et, dictum tortor. Morbi in euismod felis, vel posuere sem.
-                            Maecenas ut quam ut purus efficitur elementum. In tempus eget ex sit amet placerat. Duis ac metus vel massa malesuada pellentesque.
-                            Vestibulum vitae suscipit libero. Praesent auctor nisi et eros dapibus sodales.
-                            Ut condimentum venenatis erat et dictum. Integer eget lacus a orci dignissim sodales.
+                            Fique a vontade para entrar em contato comigo. Estou sempre aberto para discutir novos desafios, ideias criativas ou oportunidades de crescimento profissional.
                             <br/>
                             <br/>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque eu eros sit amet malesuada.
-                            Vestibulum quis est aliquet, lobortis diam et, dictum tortor. Morbi in euismod felis, vel posuere sem.
+                            Estamos disponíveis também para iniciarmos um novo projeto e impulsionar as suas vendas e aumentar a sua visibilidade! Entre em contato. 
 
                         </p>
                         <S.SocialMediaDiv>
-                            <a href='#'>
-                                <FaLinkedinIn size={25}/>
+                            <a href='https://www.linkedin.com/in/leonardo-hernandes/' target='blank'>
+                                <FaLinkedinIn size={30}/>
                             </a>
-                            <a href='#'>
-                                <FaGithub size={25}/>
+                            <a href='https://github.com/leonardohernandesq' target='blank'>
+                                <FaGithub size={30}/>
                             </a>
-                            <a href='#'>
-                                <FaWhatsapp size={25}/>
+                            <a href='https://api.whatsapp.com/send/?phone=351922269284&type=phone_number&app_absent=0' target='blank'>
+                                <FaWhatsapp size={30}/>
                             </a>
                         </S.SocialMediaDiv>
                     </div>
