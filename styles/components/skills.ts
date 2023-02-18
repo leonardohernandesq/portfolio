@@ -91,10 +91,9 @@ export const ContainerStack = styled.div`
     @media(max-width:900px){
         grid-template-columns: auto auto auto auto;
     }
-    @media(max-width:600){
+    @media(max-width:600px){
         grid-template-columns: auto auto auto;
     }
-
     z-index:10;
 `
 
