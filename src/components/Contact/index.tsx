@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa'
 export function Contact(){
     return(
         <S.Container>
-            <S.Wrapper id='contact'>
+            <S.Wrapper id='contato'>
                 <Title>Contato</Title>
                 
                 <S.ContactContainer>
@@ -20,7 +20,7 @@ export function Contact(){
                             <br/>
                             Estamos disponíveis também para iniciarmos um novo projeto e impulsionar as suas vendas e aumentar a sua visibilidade! Entre em contato. 
 
-                        </p>
+                        </p> 
                         <S.SocialMediaDiv>
                             <a href='https://www.linkedin.com/in/leonardo-hernandes/' target='blank'>
                                 <FaLinkedinIn size={30}/>
