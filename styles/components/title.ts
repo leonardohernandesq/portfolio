@@ -4,6 +4,7 @@ export const Title = styled.h1`
 	background-image: url('title.jpg');
 	background-size: contain;
 	color: transparent;
+	background-clip: text;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
 	text-transform: capitalize;
