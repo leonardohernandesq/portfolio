@@ -20,7 +20,7 @@ export function Projects(){
                             return(
                                 <S.ArticleProject key={item.id}>
                                     <S.ImageProject>
-                                        <img src={item.background} alt={item.title} width={380} height={190} />
+                                        <img src={item.background} alt={item.title} />
                                         <div>
                                             {item.title}
                                         </div>
