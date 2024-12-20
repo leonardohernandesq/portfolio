@@ -2,6 +2,8 @@
 import * as S from '../../../styles/components/contact';
 import { Title } from '../Title';
 import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa'
+import Link from 'next/link';
+
 
 export function Contact(){
     return(
@@ -22,15 +24,15 @@ export function Contact(){
 
                         </p> 
                         <S.SocialMediaDiv>
-                            <a href='https://www.linkedin.com/in/leonardo-hernandes/' target='blank'>
+                            <Link aria-label='Conheça o meu Linkedin' href='https://www.linkedin.com/in/leonardo-hernandes/' target='blank'>
                                 <FaLinkedinIn size={30}/>
-                            </a>
-                            <a href='https://github.com/leonardohernandesq' target='blank'>
+                            </Link>
+                            <Link aria-label='Conheça o meu GitHub' href='https://github.com/leonardohernandesq' target='blank'>
                                 <FaGithub size={30}/>
-                            </a>
-                            <a href='https://api.whatsapp.com/send/?phone=351922269284&type=phone_number&app_absent=0' target='blank'>
+                            </Link>
+                            <Link aria-label='Converse comigo no Whatsapp' href='https://api.whatsapp.com/send/?phone=351922269284&type=phone_number&app_absent=0' target='blank'>
                                 <FaWhatsapp size={30}/>
-                            </a>
+                            </Link>
                         </S.SocialMediaDiv>
                     </div>
                 </S.ContactContainer>

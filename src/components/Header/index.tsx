@@ -21,16 +21,16 @@ export function Header(){
                 </S.Logo>
 
                 <S.NavHeader>
-                    <Link href="/">Home</Link>
-                    <Link href="#about">Quem Sou</Link>
-                    <Link href="#skills">Skills</Link>
-                    <Link href="#experience">Experiências</Link>
-                    <Link href="#project">Projetos</Link>
-                    <Link href="#contato">Contato</Link>
+                    <Link aria-label='Acesse a Homepage' href="/">Home</Link>
+                    <Link aria-label='Acesse a área de Quem Sou' href="#about">Quem Sou</Link>
+                    <Link aria-label='Acesse a área de Skills' href="#skills">Skills</Link>
+                    <Link aria-label='Acesse a área de Experiências' href="#experience">Experiências</Link>
+                    <Link aria-label='Acesse a área de Projetos' href="#project">Projetos</Link>
+                    <Link aria-label='Acesse a área de Contato' href="#contato">Contato</Link>
                 </S.NavHeader>
 
                 <S.DropMobile>
-                    <button onClick={() => OpenModal()}>
+                    <button aria-label='Abrir o menu' onClick={() => OpenModal()}>
                         {
                             visible ?
                                 <FiX/>
@@ -45,12 +45,12 @@ export function Header(){
                                 <S.DropDown>
                                     
                                     <div className='menu'>
-                                        <Link href="/" onClick={() => OpenModal()}>Home</Link>
-                                        <Link href="#about" onClick={() => OpenModal()}>Quem Sou</Link>
-                                        <Link href="#skills" onClick={() => OpenModal()}>Skills</Link>
-                                        <Link href="#experience" onClick={() => OpenModal()}>Experiências</Link>
-                                        <Link href="#project" onClick={() => OpenModal()}>Projetos</Link>
-                                        <Link href="#contato" onClick={() => OpenModal()}>Contato</Link>
+                                        <Link aria-label='Acesse a Homepage' href="/" onClick={() => OpenModal()}>Home</Link>
+                                        <Link aria-label='Acesse a área de Quem Sou' href="#about" onClick={() => OpenModal()}>Quem Sou</Link>
+                                        <Link aria-label='Acesse a área de Skills' href="#skills" onClick={() => OpenModal()}>Skills</Link>
+                                        <Link aria-label='Acesse a área de Experiências' href="#experience" onClick={() => OpenModal()}>Experiências</Link>
+                                        <Link aria-label='Acesse a área de Projetos' href="#project" onClick={() => OpenModal()}>Projetos</Link>
+                                        <Link aria-label='Acesse a área de Contato' href="#contato" onClick={() => OpenModal()}>Contato</Link>
                                     </div>
                                 </S.DropDown>
                             </> :

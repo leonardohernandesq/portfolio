@@ -6,7 +6,7 @@ export function Footer(){
     return(
         <S.Container>
             <S.Footer>
-                <Link href="https://www.linkedin.com/in/leonardo-hernandes/" target='_blank'>
+                <Link aria-label='Conheça o meu Linkedin' href="https://www.linkedin.com/in/leonardo-hernandes/" target='_blank'>
                     <p>Desenvolvido por Leonardo Hernandes | {data.getFullYear()} - ©</p>
                 </Link>
             
