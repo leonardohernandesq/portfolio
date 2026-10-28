@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { heroState } from '@/lib/heroState';
 import { particleFragmentShader, particleVertexShader } from './shaders/particles';
 
-const PARTICLE_COUNT = 2600;
+const PARTICLE_COUNT = typeof window !== 'undefined' && window.innerWidth < 768 ? 1100 : 2600;
 
 function makeField(count: number) {
   const home = new Float32Array(count * 3);

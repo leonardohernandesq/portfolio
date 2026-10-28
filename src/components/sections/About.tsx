@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap, SplitText, useGSAP } from "@/lib/gsap";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { stats } from "@/data/content";
@@ -10,25 +10,41 @@ const GlobeScene = dynamic(() => import("@/components/three/globe/GlobeScene"), 
 
 export function About() {
   const root = useRef<HTMLElement>(null);
+  const globeBox = useRef<HTMLDivElement>(null);
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    const el = globeBox.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setShowGlobe(true);
+        observer.disconnect();
+      },
+      { rootMargin: "600px 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useGSAP(
     () => {
-      const split = SplitText.create(".about-lead", { type: "words" });
-      gsap.fromTo(
-        split.words,
-        { opacity: 0.12 },
-        {
-          opacity: 1,
-          stagger: 0.1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".about-lead",
-            start: "top 80%",
-            end: "bottom 45%",
-            scrub: true,
-          },
+      const split = SplitText.create(".about-lead", {
+        type: "words",
+        aria: "none",
+      });
+      gsap.from(split.words, {
+        color: "#6e6e72",
+        stagger: 0.1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-lead",
+          start: "top 80%",
+          end: "bottom 45%",
+          scrub: true,
         },
-      );
+      });
 
       gsap.fromTo(
         ".about-image",
@@ -83,11 +99,12 @@ export function About() {
 
       <div className="about-body mt-24 grid gap-12 md:mt-32 md:grid-cols-12 md:items-center md:gap-10">
         <div
+          ref={globeBox}
           className="about-image relative aspect-square w-full overflow-hidden rounded-2xl border border-paper/10 bg-[radial-gradient(circle_at_50%_35%,rgba(241,143,1,0.12),transparent_65%)] md:col-span-5"
           role="img"
           aria-label="Globo 3D interativo com as tecnologias que utilizo"
         >
-          <GlobeScene />
+          {showGlobe && <GlobeScene />}
         </div>
 
         <div className="flex flex-col gap-12 md:col-span-6 md:col-start-7">

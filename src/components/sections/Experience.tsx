@@ -66,44 +66,46 @@ export function Experience() {
           </div>
         </div>
 
-        <ol className="exp-list relative md:col-span-8">
-          <span className="absolute left-1.75 top-2 bottom-0 w-px bg-paper/10" />
-          <span className="exp-line absolute left-1.75 top-2 bottom-0 w-px origin-top bg-accent" />
+        <div className="relative md:col-span-8">
+          <span aria-hidden className="absolute left-1.75 top-2 bottom-0 w-px bg-paper/10" />
+          <span aria-hidden className="exp-line absolute left-1.75 top-2 bottom-0 w-px origin-top bg-accent" />
 
-          {experiences.map((exp) => (
-            <li
-              key={exp.company}
-              className="exp-item group relative pb-24 pl-12 last:pb-0 md:pl-20"
-            >
-              <span className="exp-dot absolute left-0 top-2 size-3.75 rounded-full border-2 border-accent bg-ink transition-colors duration-500 group-hover:bg-accent" />
+          <ol className="exp-list relative">
+            {experiences.map((exp) => (
+              <li
+                key={exp.company}
+                className="exp-item group relative pb-24 pl-12 last:pb-0 md:pl-20"
+              >
+                <span className="exp-dot absolute left-0 top-2 size-3.75 rounded-full border-2 border-accent bg-ink transition-colors duration-500 group-hover:bg-accent" />
 
-              <div className="exp-reveal flex flex-wrap items-center gap-x-6 gap-y-2 font-display text-xs uppercase tracking-[0.3em] text-muted">
-                <span>{exp.period}</span>
-                <span className="h-px w-8 bg-paper/20" />
-                <span>{exp.location}</span>
-              </div>
-              <h3 className="exp-reveal mt-6 font-display text-4xl font-bold tracking-tight transition-colors duration-500 group-hover:text-accent md:text-6xl">
-                {exp.company}
-              </h3>
-              <p className="exp-reveal mt-2 font-display text-xl text-paper/80">
-                {exp.role}
-              </p>
-              <p className="exp-reveal mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-                {exp.description}
-              </p>
-              <ul className="exp-reveal mt-6 flex flex-wrap gap-2">
-                {exp.stack.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full border border-paper/15 px-4 py-1.5 font-display text-xs uppercase tracking-[0.2em] text-paper/70"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ol>
+                <div className="exp-reveal flex flex-wrap items-center gap-x-6 gap-y-2 font-display text-xs uppercase tracking-[0.3em] text-muted">
+                  <span>{exp.period}</span>
+                  <span className="h-px w-8 bg-paper/20" />
+                  <span>{exp.location}</span>
+                </div>
+                <h3 className="exp-reveal mt-6 font-display text-4xl font-bold tracking-tight transition-colors duration-500 group-hover:text-accent md:text-6xl">
+                  {exp.company}
+                </h3>
+                <p className="exp-reveal mt-2 font-display text-xl text-paper/80">
+                  {exp.role}
+                </p>
+                <p className="exp-reveal mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+                  {exp.description}
+                </p>
+                <ul className="exp-reveal mt-6 flex flex-wrap gap-2">
+                  {exp.stack.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-paper/15 px-4 py-1.5 font-display text-xs uppercase tracking-[0.2em] text-paper/70"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );
