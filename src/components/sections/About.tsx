@@ -22,7 +22,7 @@ export function About() {
         setShowGlobe(true);
         observer.disconnect();
       },
-      { rootMargin: "600px 0px" },
+      { rootMargin: "0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();

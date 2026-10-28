@@ -42,7 +42,7 @@ export function Blob() {
 
   return (
     <mesh ref={mesh} scale={0}>
-      <icosahedronGeometry args={[1.5, 96]} />
+      <sphereGeometry args={[1.5, 160, 120]} />
       <shaderMaterial ref={material} uniforms={uniforms} vertexShader={blobVertexShader} fragmentShader={blobFragmentShader} />
     </mesh>
   );
