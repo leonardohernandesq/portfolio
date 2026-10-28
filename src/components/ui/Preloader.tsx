@@ -17,10 +17,10 @@ export function Preloader() {
       const progress = { value: 0 };
 
       gsap
-        .timeline({ delay: 0.2 })
+        .timeline({ delay: 0.1 })
         .to(progress, {
           value: 100,
-          duration: 1.8,
+          duration: 1.1,
           ease: "power3.inOut",
           onUpdate: () => {
             if (count.current)
@@ -31,7 +31,7 @@ export function Preloader() {
         })
         .to(
           ".preloader-bar",
-          { scaleX: 1, duration: 1.8, ease: "power3.inOut" },
+          { scaleX: 1, duration: 1.1, ease: "power3.inOut" },
           "<",
         )
         .to(".preloader-content", {
